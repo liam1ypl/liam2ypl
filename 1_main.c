@@ -26,6 +26,15 @@ int main()
     int n;
     printf("请输入一个小于50的正整数:");
     scanf("%d",&n);
+    if (n<1  || n>=50){
+        printf("请输入一个小于50的正整数");
+        return 0;
+    }
+    if(isPrime(n)){
+        printf("密钥正确，密码设置成功\n");
+    } else{
+        printf("密钥不安全，请重新输入\n");
+    }
+    return 0;
 
 }
-
