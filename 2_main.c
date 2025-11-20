@@ -2,19 +2,24 @@
 //647363360@qq.com
 //杨攀亮
 #include <stdio.h>
+void multiplyByTwo(int *arr, int len) {
+    for (int i = 0; i < len; i++) {
+        *(arr + i) *= 2; 
+    }
+}
+
 int main() {
     int arr[5];
-    int i;
-    for (i = 0; i < 5; i++) {
+   
+    for (int i = 0; i < 5; i++) {
         scanf("%d", &arr[i]);
     }
-    int *p = arr;
-    for (i = 0; i < 5; i++) {
-        *(p + i) *= 2;
+ 
+    multiplyByTwo(arr, 5);
+   
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", arr[i]);
     }
-    for (i = 0; i < 5; i++) {
-        printf("%d ", *(p + i));
-    }
+    printf("\n");
     return 0;
 }
- 
